@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<HBox alignment="TOP_RIGHT" maxHeight="-Infinity" prefHeight="57.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="najah.skypelike.client.MessageController">
+   <children>
+      <VBox alignment="CENTER_RIGHT" prefHeight="57.0" prefWidth="456.0">
+         <children>
+            <Label fx:id="timeLabel" alignment="CENTER" prefHeight="28.0" prefWidth="320.0" text="2023-12-3 10:06:43">
+               <font>
+                  <Font name="Ink Free" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#onMouseEnter" onMouseExited="#onMouseExit" prefHeight="57.0" prefWidth="127.0">
+               <children>
+                  <Label fx:id="deleteLabel" onMouseClicked="#onDeleteClicked" text="Delete" textFill="#bc0808" visible="false">
+                     <font>
+                        <Font name="Lucida Handwriting Italic" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <TextFlow fx:id="messageBox" prefHeight="29.0" prefWidth="266.0" style="-fx-border-color: #999; -fx-border-radius: 30;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="15.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                  </TextFlow>
+                  <ImageView fx:id="iconBox" fitHeight="35.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/user.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="15.0" right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</HBox>
